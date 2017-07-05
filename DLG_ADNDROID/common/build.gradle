@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        buildConfigField "boolean", "LOG_UTILS","true"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile "junit:junit:${JUNIT}"
+    compile "io.reactivex:rxjava:${RXJAVA}"
+    compile "io.reactivex:rxandroid:${RXANDROID}"
+    compile "com.android.support:appcompat-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:palette-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:design:${ANDROID_SUPPORT}"
+    compile "com.android.support:gridlayout-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:mediarouter-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:palette-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:recyclerview-v7:${ANDROID_SUPPORT}"
+    compile "com.ToxicBakery.viewpager.transforms:view-pager-transforms:${VIEWPAGER_TRANSFORMS}"
+    compile "com.github.bumptech.glide:glide:${GLIDE}"
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'top.zibin:Luban:1.1.1'
+    compile 'cn.pedant.sweetalert:library:1.3'
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/homeworker_layout_bottom"
+    android:layout_alignParentLeft="true"
+    android:layout_marginBottom="7dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/bg_white_round"
+    android:orientation="horizontal"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/home_workday"
+        android:layout_width="@dimen/width_13_80"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:checked="true"
+        android:hint="1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="5dp"
+        android:text="工作日"
+        android:textColor="@color/checked_pink_gray" />
+
+    <TextView
+        android:id="@+id/home_week"
+        android:layout_width="@dimen/width_13_80"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:hint="2"
+        android:paddingBottom="5dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="5dp"
+        android:text="双休日"
+        android:textColor="@color/checked_pink_gray" />
+
+    <TextView
+        android:id="@+id/home_project"
+        android:layout_width="@dimen/width_13_80"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:hint="3"
+        android:paddingBottom="5dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="5dp"
+        android:text="计件"
+        android:textColor="@color/checked_pink_gray" />
+
+</LinearLayout>

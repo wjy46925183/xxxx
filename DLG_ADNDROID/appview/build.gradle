@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+//获取时间戳
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "gongren.com.dlg"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+
+        // dex突破65535的限制
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a' //, 'x86', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    lintOptions{
+        checkReleaseBuilds false
+    }
+    signingConfigs {
+        debug {
+            storeFile file(STORE_FILE)//签名文件路径
+            storePassword STORE_PASSWORD
+            keyAlias KEYALIAS
+            keyPassword KEY_PASSWORD  //签名密码
+        }
+        release {
+            storeFile file(STORE_FILE)//签名文件路径
+            storePassword STORE_PASSWORD
+            keyAlias KEYALIAS
+            keyPassword KEY_PASSWORD  //签名密码
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable false
+            signingConfig signingConfigs.debug
+            renderscriptDebuggable true
+            minifyEnabled true
+            zipAlignEnabled false
+//            proguardFile 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.release
+            renderscriptDebuggable true
+            renderscriptOptimLevel 3
+            minifyEnabled true
+            pseudoLocalesEnabled false
+//            proguardFile 'proguard-project.txt'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+    }
+    sourceSets {
+        main {
+//            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+    productFlavors {
+        dalinggong_C_000 {}
+        baidu_C_001 {}
+        c360_C_002 {}
+        yingyongbao_C_003 {}
+        xiaomi_C_004 {}
+        ppzhushou_C_005 {}
+        wandujia_C_006 {}
+        leshangdian_C_007 {}
+        oppo_C_008 {}
+        yiyonghui_C_009 {}
+        sougou_C_010 {}
+        huawei_C_011 {}
+        meizu_C_012 {}
+        anzi_C_013 {}
+        yingyonghui_C_014 {}
+        leshi_C_015 {}
+        chuizi_C_016 {}
+        liqu_C_017 {}
+        yidong_C_018 {}
+        liantong_C_019 {}
+        dianxin_C_020 {}
+        zsdx_C_021 {}
+
+        productFlavors.all { flavor ->
+            def _name = name.substring(0,name.length()-6)
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: _name]
+        }
+    }
+
+    //修改生成的apk名字
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def oldFile = output.outputFile
+            if (variant.buildType.name.equals('release')) {
+                def name = variant.productFlavors[0].name;
+                def _name = name.substring(0,name.length()-6)
+                def _id = name.substring(_name.length()+1,name.length())
+                def releaseApkName = 'com.' + _name+'.'+_id+'.'+getDate()+'.v'+defaultConfig.versionName+ '.apk'
+                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.zcw:togglebutton-library:1.0.0'
+//    compile 'com.jungly:gridPasswordView:0.3'
+    compile 'de.halfbit:pinned-section-listview:1.0.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile "com.jakewharton:butterknife:${BUTTERKNIFE}"
+    compile project(':jpush')
+    compile project(':InnerLib')
+    compile project(':update')
+    compile project(':Canrefresh')
+    compile project(':common')
+    compile project(':umengshare')
+    compile project(':appperson')
+    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+}

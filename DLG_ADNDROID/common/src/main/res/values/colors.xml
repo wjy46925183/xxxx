@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02add9</color>
+    <color name="colorPrimaryDark">#02add9</color>
+    <color name="colorAccent">#02add9</color>
+
+    <color name="black">#000000</color>
+    <color name="black_text">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="slow_white">#FAF9F5</color>
+    <color name="bg_gray">#E9E9E9</color>
+    <color name="green">#169C17</color>
+    <color name="red">#FE0000</color>
+    <color name="orange_yellow">#ff9752</color>
+    <color name="blue">#02add9</color>
+    <color name="blue_pressed">#00a1ca</color>
+    <color name="blue_deep">#0199C0</color>
+    <color name="gray_pressed">@color/bg_color</color>
+    <color name="gray_line">#EBEBEB</color>
+    <color name="gray_button">#F0F0F0</color>
+    <color name="gray_text">#888888</color>
+
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <color name="bgColor_alertview_alert_start">#f0f0f0</color>
+    <!--标题颜色-->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!--消息颜色-->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--取消按钮颜色-->
+    <color name="textColor_alert_button_cancel">#007aff</color>
+    <!--高亮按钮颜色-->
+    <color name="textColor_alert_button_destructive">#ff3b30</color>
+    <!--普通按钮文字颜色-->
+    <color name="textColor_alert_button_others">#007aff</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#EAEAEA</color>
+    <!--actionsheet模式的取消按钮背景颜色-->
+    <color name="bgColor_actionsheet_cancel_nor">#ffffff</color>
+
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="find_time">#F77843</color>
+    <color name="pink">#F47741</color>
+    <!-- start 认证背景色 -->
+    <color name="wallet_success">#2cc701</color>
+    <color name="wallet_fail">#f7582e</color>
+    <color name="wallet_ing">#fec106</color>
+    <color name="wallet_start">#c5c5c5</color>
+    <!-- end 认证背景色 -->
+
+    <!--所有控件部分的颜色-->
+    <color name="bottom_btn_bg">#ffb552</color><!--底部的颜色-->
+    <color name="bg_color">#f7f7f7</color><!--背景的颜色-->
+    <color name="small_line_bg">#e5e5e5</color><!--细的分割线的颜色-->
+    <color name="yinying_bg">#33000000</color><!--弹框阴影的颜色-->
+    <color name="white_color">#ffffff</color><!--白色的颜色-->
+    <color name="transparent_color">#00000000</color><!--透明的颜色-->
+    <color name="tmwhite_color">#00ffffff</color><!--透明白色的颜色-->
+    <color name="text_detel_color">#f76e38</color>
+    <color name="text_spreads_color">#ffb452</color>
+
+    <!--所有文字的颜色-->
+    <color name="yellow_textcolor">#ffae44</color><!--评分，元的颜色-->
+    <color name="chenghong_textcolor">#ff7a52</color><!--橙红色字的颜色-->
+    <color name="tab_selected_textcolor">#ffb452</color><!--tab选中的字的颜色-->
+    <color name="gray_textcolor">#7e7e7e</color><!--辅助字的颜色-->
+    <color name="black_textcolor">#202020</color><!--深黑色字的颜色-->
+    <color name="right_change_textcolor">#7e7e7e</color><!--item,右边可变的字的颜色-->
+    <color name="right_nochange_textcolor">#c6c5c5</color><!--item,右边不可变的字的颜色-->
+    <color name="hint_textcolor">#c6c5c5</color><!--输入框的提示字的颜色-->
+    <color name="fu_textcolor">#626262</color><!--副标题字的颜色-->
+    <color name="green_textcolor">#00bf74</color><!--绿色字的颜色-->
+    <color name="gw_unselect_textcolor">#a3a3a3</color><!--gridview选中前的颜色-->
+    <color name="receipt_txt1">#404040</color><!-- 发票字体颜色1 -->
+
+    <color name="yellow_btncolor">#ffb353</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_c6c5c5">#c6c5c5</color>
+
+    <color name="receipt_txt2">#c4c4c4</color><!-- 发票字体颜色1 -->
+    <color name="receipt_txt3">#ffa892</color><!-- 发票字体颜色1 -->
+    <color name="receipt_txt4">#9b9b9b</color><!-- 发票字体颜色1 -->
+    <color name="receipt_txt5">#ff7a52</color><!-- 发票字体颜色1 -->
+    <color name="yellow_price">#FF9752</color>
+    <color name="wallet">#a3a3a3</color>
+    <color name="bg_deep_orange">#FD8841</color><!--首页拖拉控件背景-->
+</resources>

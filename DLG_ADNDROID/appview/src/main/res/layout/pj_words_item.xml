@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pressed_layout"
+    >
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="@dimen/px_247"
+        android:layout_height="@dimen/px_60"
+        android:gravity="center"
+        android:background="@drawable/gw_item_bg"
+        android:text="服务态度，真棒"
+        android:textColor="@drawable/gridview_textcolor_selector"
+        android:textSize="@dimen/small_textsize"
+        />
+</LinearLayout>

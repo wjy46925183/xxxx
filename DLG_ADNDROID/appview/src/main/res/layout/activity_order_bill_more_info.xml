@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    tools:context="gongren.com.dlg.activity.OrderBillMoreInfoActivity">
+    <include android:id="@+id/title" layout="@layout/actionbar_text"/>
+    <include layout="@layout/line_horizontal_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="纳税人识别号"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/et_taxpayer_distinguish_number"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@null"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:background="@null"
+                android:hint="请填写纳税人识别号"
+                />
+        </LinearLayout>
+        <include layout="@layout/line_horizontal_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/et_company_address"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:hint="请填写公司地址"
+                />
+        </LinearLayout>
+        <include layout="@layout/line_horizontal_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/et_company_phone"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:hint="请填写公司电话"
+                />
+        </LinearLayout>
+        <include layout="@layout/line_horizontal_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开户行"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/et_bank_account"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:hint="请填写开户行"
+                />
+        </LinearLayout>
+        <include layout="@layout/line_horizontal_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开户行帐号"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/et_bank_account_number"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:hint="请填写开户行帐号"
+                />
+        </LinearLayout>
+        <include layout="@layout/line_horizontal_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注说明"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/et_remarks_explain"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:hint="请填写备注说明"
+                />
+        </LinearLayout>
+        <include layout="@layout/line_horizontal_gray" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/bottom_btn_bg"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="确认"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

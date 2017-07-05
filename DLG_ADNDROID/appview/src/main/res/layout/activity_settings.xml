@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View style="@style/small_allline_style" />
+
+    <LinearLayout style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="版本号" />
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            style="@style/right_text_style"
+            android:text="V3.0" />
+
+    </LinearLayout>
+
+    <View style="@style/small_line_style" />
+
+    <LinearLayout
+        android:id="@+id/changepwd_linear"
+        style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="修改密码" />
+
+        <TextView
+            style="@style/right_text_style"
+            android:text="" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <View style="@style/small_line_style" />
+
+    <LinearLayout
+        android:id="@+id/renzheng_linear"
+        style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="实名认证" />
+
+        <TextView
+            style="@style/right_text_style"
+            android:text="" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <View style="@style/bold_line_style" />
+
+    <LinearLayout
+        android:id="@+id/clear_cache_linear"
+        style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="清理缓存" />
+
+        <TextView
+            android:id="@+id/cache_text"
+            style="@style/right_text_style"
+            android:text="1.5m" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <View style="@style/bold_line_style" />
+
+    <LinearLayout
+        android:id="@+id/userxy_linear"
+        style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="用户协议" />
+
+        <TextView
+            style="@style/right_text_style"
+            android:text="" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <View style="@style/small_line_style" />
+
+    <LinearLayout
+        android:id="@+id/about_linear"
+        style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="关于我们" />
+
+        <TextView
+            style="@style/right_text_style"
+            android:text="" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+    <View style="@style/bold_line_style" />
+    <LinearLayout
+        android:id="@+id/company_linear"
+        style="@style/MyProfile_Layout"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="切换企业版" />
+
+        <TextView
+            style="@style/right_text_style"
+            android:text="" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <View style="@style/bold_line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <Button
+            android:id="@+id/tv_exit"
+            style="@style/bottom_btn_style"
+            android:text="退出" />
+    </LinearLayout>
+</LinearLayout>

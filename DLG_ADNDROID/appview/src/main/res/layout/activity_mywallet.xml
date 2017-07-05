@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_line"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_text"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@mipmap/bg_mywallet"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="余额(元)"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:drawableLeft="@mipmap/icon_wallet_qianbi"
+                        android:drawablePadding="10dp"
+                        android:text="0.0"
+                        android:textColor="#ff7a52"
+                        android:textSize="42sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="折合金橙 0 个"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_explain"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img_bangzhu"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pressed_layout"
+                android:drawableLeft="@mipmap/wallet_tixian"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/next"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="充值"
+                android:textColor="#202020"
+                android:textSize="16sp"/>
+
+            <include layout="@layout/line_horizontal_gray"/>
+
+            <TextView
+                android:id="@+id/tv_withdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/pressed_layout"
+                android:drawableLeft="@mipmap/wallet_chongzhi"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/next"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="提现"
+                android:textColor="#202020"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_vouchers"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pressed_layout"
+                android:drawableLeft="@mipmap/wallet_duihuanma"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/next"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="兑换码"
+                android:textColor="#202020"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_invoicemanager"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pressed_layout"
+                android:drawableLeft="@mipmap/mywallet_invoicemaneger"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/next"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="发票管理"
+                android:textColor="#202020"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pressed_layout"
+                android:drawableLeft="@mipmap/wallet_shezhi"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/next"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="设置"
+                android:textColor="#202020"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

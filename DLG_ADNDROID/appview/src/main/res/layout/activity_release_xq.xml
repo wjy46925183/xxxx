@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <include
+        layout="@layout/table_head_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/bold_line_style"/>
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="零工"/>
+
+                <EditText
+                    android:id="@+id/linggong_text"
+                    style="@style/right_release_style"
+                    android:hint="请输入零工名称"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textCursorDrawable="@null">
+
+                    <requestFocus/>
+                </EditText>
+            </LinearLayout>
+
+            <View style="@style/small_line_style"/>
+
+            <LinearLayout
+                android:id="@+id/type_select_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="类型"/>
+
+                <TextView
+                    android:id="@+id/type_text"
+                    style="@style/right_release_style"
+
+                    android:hint="请选择类型"
+                    android:text=""
+                    android:textColorHint="@color/hint_textcolor"/>
+
+                <ImageView style="@style/right_img_style"/>
+            </LinearLayout>
+
+            <View style="@style/small_line_style"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx">
+
+                <TextView
+                    android:id="@+id/desc_tab"
+                    android:layout_width="@dimen/px_120"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:gravity="center_vertical"
+                    android:text="描述"
+                    android:textColor="@color/black_textcolor"
+                    android:textSize="@dimen/normal_textsize"/>
+
+                <EditText
+                    android:id="@+id/desc_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/desc_tab"
+                    android:background="@color/transparent_color"
+                    android:gravity="top"
+                    android:hint="说一说具体的零工需求，清楚明确的描述更容易吸引雇员接单(5-200字)"
+                    android:maxLength="200"
+                    android:minHeight="@dimen/px_120"
+                    android:paddingBottom="@dimen/px_20"
+                    android:paddingLeft="@dimen/px_20"
+                    android:paddingTop="@dimen/px_20"
+                    android:text=""
+                    android:textColor="@color/cmbkb_lightblack"
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textSize="@dimen/normal_textsize"/>
+
+            </RelativeLayout>
+
+            <View style="@style/bold_line_style"/>
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="人数"/>
+
+                <EditText
+                    android:id="@+id/people_num_text"
+                    style="@style/right_release_style"
+                    android:digits="0123456789"
+                    android:hint="请输入零工需求数量"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textCursorDrawable="@null"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/jine_line1"
+                style="@style/bold_line_style"/>
+
+            <LinearLayout
+                android:id="@+id/jine_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="报酬(元)"/>
+
+                <EditText
+                    android:id="@+id/xxx_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="我愿意支付多少报酬给雇员"
+                    android:maxLength="6"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColorHint="@color/hint_textcolor"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/jine_line2"
+                style="@style/small_line_style"/>
+
+            <RelativeLayout
+                android:id="@+id/unit_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="单位"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/day_rbtn"
+                        android:layout_width="@dimen/px_120"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/time_btn_bg_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="天"
+                        android:textColor="@drawable/gridview_textcolor_selector"
+                        android:textSize="@dimen/normal_textsize"/>
+
+                    <View
+                        android:layout_width="@dimen/px_30"
+                        android:layout_height="match_parent"/>
+
+                    <RadioButton
+                        android:id="@+id/hour_rbtn"
+                        android:layout_width="@dimen/px_120"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/time_btn_bg_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="小时"
+                        android:textColor="@drawable/gridview_textcolor_selector"
+                        android:textSize="@dimen/normal_textsize"/>
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View style="@style/bold_line_style"/>
+
+            <LinearLayout
+                android:id="@+id/date_select_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="日期"/>
+
+                <TextView
+                    android:id="@+id/date_text"
+                    style="@style/right_release_style"
+                    android:hint="请选择日期"
+                    android:text=""
+                    android:textColorHint="@color/hint_textcolor"/>
+
+                <ImageView style="@style/right_img_style"/>
+            </LinearLayout>
+
+            <View style="@style/small_line_style"/>
+
+            <LinearLayout
+                android:id="@+id/time_select_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="时间"/>
+
+                <TextView
+                    android:id="@+id/time_text"
+                    style="@style/right_release_style"
+                    android:hint="请选择时间"
+                    android:text=""
+                    android:textColorHint="@color/hint_textcolor"/>
+
+                <ImageView style="@style/right_img_style"/>
+            </LinearLayout>
+
+            <View style="@style/bold_line_style"/>
+
+            <RelativeLayout
+                android:id="@+id/address_select_re"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx">
+
+                <TextView
+                    android:id="@+id/address_tab"
+                    android:layout_width="@dimen/px_120"
+                    android:layout_height="@dimen/px_88"
+
+                    android:gravity="center_vertical"
+                    android:text="地址"
+                    android:textColor="@color/black_textcolor"
+                    android:textSize="@dimen/normal_textsize"/>
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/add_right_img"
+                    android:background="@color/transparent_color"
+                    android:gravity="center_vertical"
+                    android:hint="请选择地址"
+                    android:maxWidth="@dimen/px_560"
+                    android:minHeight="@dimen/px_88"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/cmbkb_lightblack"
+                    android:textColorHint="@color/hint_textcolor"/>
+
+                <ImageView
+                    android:id="@+id/add_right_img"
+                    style="@style/right_img_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/baoxian_linear"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/bg_color">
+
+                <CheckBox
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/checkbox" />
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购买保险"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/app_color_dodgerblue"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="(雇工意外险,2元/人.天,最高保额50万)"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:background="@color/bg_color"/>
+
+            <TextView
+                android:id="@+id/commit_btn"
+                style="@style/bottom_btn_style"
+                android:text="发布"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

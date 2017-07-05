@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_text" />
+
+    <include layout="@layout/line_horizontal_gray" />
+
+    <RadioGroup
+        android:id="@+id/rg_orderact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_72"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_01"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/checked_blue_gray_layer"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@color/checked_blue_gray"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/rb_02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/checked_blue_gray_layer"
+            android:button="@null"
+            android:gravity="center"
+            android:text="进行中"
+            android:textColor="@color/checked_blue_gray"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/rb_03"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/checked_blue_gray_layer"
+            android:button="@null"
+            android:gravity="center"
+            android:text="待付款"
+            android:textColor="@color/checked_blue_gray"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/rb_04"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/checked_blue_gray_layer"
+            android:button="@null"
+            android:gravity="center"
+            android:text="已完成"
+            android:textColor="@color/checked_blue_gray"
+            android:textSize="14dp" />
+
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_orderact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>
+

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:orientation="vertical">
+
+            <include layout="@layout/actionbar_text" />
+
+            <View style="@style/small_allline_style" />
+
+            <LinearLayout
+                android:id="@+id/pca_linear"
+                style="@style/MyProfile_Layout"
+                android:background="@drawable/pressed_layout"
+                android:descendantFocusability="blocksDescendants">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="地区" />
+
+                <TextView
+                    android:id="@+id/pca_text"
+                    style="@style/right_no_changetext_style"
+                    android:hint="请选择省,市,县"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_textcolor"
+                    android:textColorHint="@color/hint_textcolor" />
+
+                <ImageView style="@style/right_img_style" />
+            </LinearLayout>
+
+            <View
+                style="@style/small_allline_style"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx" />
+
+            <LinearLayout
+                android:id="@+id/area_linear"
+                style="@style/MyProfile_Layout"
+                android:background="@drawable/pressed_layout"
+                android:descendantFocusability="blocksDescendants">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="乡/县/街道" />
+
+                <TextView
+                    android:id="@+id/area_text"
+                    style="@style/right_no_changetext_style"
+                    android:hint="请选择街道"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_textcolor"
+                    android:textColorHint="@color/hint_textcolor" />
+
+                <ImageView style="@style/right_img_style" />
+            </LinearLayout>
+
+            <View
+                style="@style/small_allline_style"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx">
+
+                <TextView
+                    android:id="@+id/address_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="详细地址"
+                    android:textColor="@color/black_textcolor"
+                    android:textSize="@dimen/normal_textsize" />
+
+                <EditText
+                    android:id="@+id/address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_toRightOf="@id/address_tab"
+                    android:background="@color/transparent_color"
+                    android:gravity="right|center_vertical"
+                    android:hint="**路**号**楼**室"
+                    android:minHeight="@dimen/px_88"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/normal_textsize" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:background="#e5e5e5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <Button
+                    android:id="@+id/btn_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pressed_layout"
+                    android:gravity="center"
+                    android:padding="1.5dp"
+                    android:text="取消"
+                    android:textColor="@color/gray_text" />
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/pressed_layout"
+                    android:gravity="center"
+                    android:padding="1.5dp"
+                    android:text="确定"
+                    android:textColor="@color/yellow_textcolor" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wheel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <gongren.com.dlg.cityUtils.WheelView
+                    android:id="@+id/id_province"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <gongren.com.dlg.cityUtils.WheelView
+                    android:id="@+id/id_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <gongren.com.dlg.cityUtils.WheelView
+                    android:id="@+id/id_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <gongren.com.dlg.cityUtils.WheelView
+                android:id="@+id/id_street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+</RelativeLayout>

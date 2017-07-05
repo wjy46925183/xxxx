@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:minHeight="10dp"
+        android:layout_height="wrap_content" >
+
+        <com.common.view.convenientbanner.view.CBLoopViewPager
+            android:id="@+id/cbLoopViewPager"
+            android:layout_width="match_parent"
+            android:minHeight="10dp"
+            android:layout_height="0dp" />
+
+        <!-- 翻页指示点的viewgroup -->
+
+        <LinearLayout
+            android:id="@+id/loPageTurningPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customcamera_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#505050">
+
+    <gongren.com.dlg.view.AutoFitTextureView
+        android:id="@+id/textureview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <include
+        android:id="@+id/head_linear"
+        layout="@layout/actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/img_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head_linear"
+        >
+
+        <ImageView
+            android:id="@+id/bg_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/hei"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/get_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_re"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tips_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_78"
+            android:text="把证件放入方框内"
+            android:textColor="@color/black_textcolor"
+            android:textSize="@dimen/normal_textsize" />
+
+        <Button
+            android:id="@+id/takepicture_btn"
+            style="@style/cust_camera_btn_style"
+            android:layout_below="@id/tips_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_78"
+            android:background="@mipmap/photo" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_btn_re"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/cancle_btn"
+                style="@style/cust_camera_btn_style"
+                android:background="@mipmap/chongpai"
+                android:text="重置"
+                android:textColor="@color/black_textcolor"
+                android:textSize="@dimen/normal_textsize" />
+
+            <Button
+                android:id="@+id/ok_btn"
+                style="@style/cust_camera_btn_style"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/ok" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

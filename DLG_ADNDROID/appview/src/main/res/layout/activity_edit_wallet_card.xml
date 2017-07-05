@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_line"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/alipay_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_logo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/zhifu_alipay" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_logo1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="支付宝"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/card_alipay_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="XXXXXX" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_alipay_unbinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_wallet_edit_card"
+                android:padding="5dp"
+                android:text="解绑"
+                android:textColor="@color/blue" />
+
+
+            <include
+                layout="@layout/line_horizontal_gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wechat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_logo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/zhifu_weixin" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_logo2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/card_wechat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="微信"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/card_wechat_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="XXXXXX" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_wechat_unbinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_wallet_edit_card"
+                android:padding="5dp"
+                android:text="解绑"
+                android:textColor="@color/blue" />
+
+
+            <include
+                layout="@layout/line_horizontal_gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bank_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_logo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/zhifu_yiwangtong" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_logo3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/card_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="银行卡"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/card_bank_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="XXXXXX" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_bank_unbinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_wallet_edit_card"
+                android:padding="5dp"
+                android:text="解绑"
+                android:textColor="@color/blue" />
+
+            <include
+                layout="@layout/line_horizontal_gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

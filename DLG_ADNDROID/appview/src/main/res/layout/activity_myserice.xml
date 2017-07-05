@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:background="@color/white">
+    <include layout="@layout/actionbar"
+        android:id="@+id/action_bar"/>
+    <FrameLayout
+        android:id="@+id/fl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bar"
+        android:layout_above="@+id/tv_add_serice"
+        android:visibility="gone"
+        android:background="#efefef">
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/no_relese"
+            android:gravity="center"
+            android:visibility="visible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您还未发布服务技能喔~"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/textColor_black_light02"
+            android:layout_marginTop="120dp"
+            android:textSize="@dimen/text_size_15"/>
+    </FrameLayout>
+
+    <com.canyinghao.canrefresh.CanRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bar"
+        android:layout_above="@+id/tv_add_serice"
+        android:background="#efefef"
+        >
+        <com.canyinghao.canrefresh.classic.ClassicRefreshView
+            android:id="@id/can_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.canyinghao.canrefresh.classic.FooterRefreshView
+            android:id="@id/can_refresh_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@id/can_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#00000000"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            />
+    </com.canyinghao.canrefresh.CanRefreshLayout>
+    <TextView
+        android:id="@+id/tv_add_serice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_5_5_80"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:background="@drawable/bottom_commit_button_bg"
+        android:textSize="@dimen/text_size_15"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:text="新增服务"/>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:background="@drawable/dialog_yuanjiao_content"
+    android:paddingRight="24dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="25dp">
+
+    <TextView
+        android:id="@+id/footer_close_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="取消"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/bg_colors_dialog_green"
+        android:textSize="14sp"
+        android:background="@drawable/selector_bg_button_cancel"/>
+
+    <TextView
+        android:id="@+id/footer_confirm_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="确定"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/bg_colors_dialog_context"
+        android:textSize="14sp"
+        android:background="@drawable/selector_bg_button"/>
+
+</LinearLayout>
+

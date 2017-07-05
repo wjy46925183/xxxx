@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingTop="80dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_nodata" />
+
+        <com.canyinghao.canrefresh.CanRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.canyinghao.canrefresh.classic.ClassicRefreshView
+                android:id="@id/can_refresh_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.canyinghao.canrefresh.classic.FooterRefreshView
+                android:id="@id/can_refresh_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@id/can_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/cmbkb_light_gray"
+                android:dividerHeight="1dp"
+                />
+
+        </com.canyinghao.canrefresh.CanRefreshLayout>
+
+        <ImageView
+            android:id="@+id/bosslist_map"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_map"/>
+    </RelativeLayout>
+
+</LinearLayout>

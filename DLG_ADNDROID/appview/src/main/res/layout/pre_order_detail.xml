@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <include
+        android:id="@+id/head_re"
+        layout="@layout/actionbar_order" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/gbottom_re"
+        android:layout_below="@id/head_re"
+        android:orientation="vertical">
+
+        <com.canyinghao.canrefresh.CanRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/can_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/per_linear"
+                        style="@style/xq_linear_style">
+
+                        <gongren.com.dlg.view.MyListView
+                            android:id="@+id/per_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cmbkb_transparent"
+                            android:dividerHeight="0dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ok_linear"
+                        style="@style/xq_linear_style"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/px_70"
+                            android:layout_marginLeft="@dimen/left_right_jx">
+
+                            <TextView
+                                android:id="@+id/ok_tab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="等待同意"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/normal_textsize" />
+
+                            <TextView
+                                android:id="@+id/ok_num_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/px_20"
+                                android:layout_toRightOf="@id/ok_tab"
+                                android:text="(3)"
+                                android:textColor="@color/yellow_textcolor"
+                                android:textSize="@dimen/small_textsize" />
+                        </RelativeLayout>
+
+                        <ListView
+                            android:id="@+id/ok_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cmbkb_transparent"
+                            android:dividerHeight="0dp" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:visibility="gone"
+                        android:id="@+id/cancle_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/cmbkb_transparent"
+                        android:dividerHeight="0dp" />
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <com.canyinghao.canrefresh.classic.ClassicRefreshView
+                android:id="@id/can_refresh_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.canyinghao.canrefresh.classic.FooterRefreshView
+                android:id="@id/can_refresh_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.canyinghao.canrefresh.CanRefreshLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="30dp"
+        android:visibility="gone"
+        android:src="@mipmap/zanwudingdan" />
+
+    <RelativeLayout
+        android:id="@+id/gbottom_re"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_88"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/all_select_re"
+            android:layout_width="@dimen/px_300"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            >
+            <CheckBox
+                android:id="@+id/all_select_cbox"
+                style="@style/checkbox_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_30" />
+
+            <TextView
+                android:id="@+id/all_select_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/all_select_cbox"
+                android:layout_marginLeft="@dimen/px_30"
+                android:text="全选"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/big_textsize" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/cancle_btn"
+            android:layout_width="@dimen/px_120"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/px_30"
+            android:layout_toLeftOf="@+id/agree_btn"
+            android:background="@color/cmbkb_transparent"
+            android:gravity="center"
+            android:text="拒绝"
+            android:textColor="@color/chenghong_textcolor"
+            android:textSize="@dimen/big_textsize" />
+
+        <Button
+            android:id="@+id/agree_btn"
+            android:layout_width="@dimen/px_120"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_30"
+            android:background="@color/cmbkb_transparent"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="@color/green_textcolor"
+            android:textSize="@dimen/big_textsize" />
+    </RelativeLayout>
+</RelativeLayout>

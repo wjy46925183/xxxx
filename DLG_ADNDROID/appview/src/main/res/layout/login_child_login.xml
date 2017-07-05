@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar"
+            android:background="@drawable/login_white_top_bg">
+
+            <ImageView
+                android:id="@+id/login_authcode_back"
+                android:layout_width="@dimen/px_70"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_jiao_pressed_layout"
+                android:clickable="true"
+                android:padding="@dimen/px_20"
+                android:src="@mipmap/back_gray" />
+
+            <TextView
+                android:id="@+id/login_authcode_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/login_authcode_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle_jiao_pressed_layout"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/px_20"
+                android:text="密码登录"
+                android:visibility="gone"
+                android:textColor="@color/color_cccccc"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/px_60"
+            android:text="输入验证码"
+            android:textColor="#333333"
+            android:textSize="@dimen/normal_textsize" />
+
+        <TextView
+            android:id="@+id/login_authcode_inputfalse2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="验证码错误"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/login_authcode_sendwho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="验证码发送 18511400883"
+            android:textSize="@dimen/small_11_textsize"
+            android:textColor="@color/color_cccccc"
+            />
+
+        <Button
+            android:id="@+id/login_authcode_time"
+            android:layout_width="@dimen/px_136"
+            android:layout_height="@dimen/px_59"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@drawable/bar_white_button"
+            android:gravity="center"
+            android:text="60s后重发"
+            android:textColor="#de000000"
+            android:textSize="@dimen/small_11_textsize"
+            />
+
+        <com.common.view.gridpasswordview.GridPasswordView
+            android:id="@+id/login_authcode_pswView"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/px_86"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/px_40"
+            app:gpvGridColor="#ffffff"
+            app:gpvLineColor="#ffb558"
+            app:gpvLineWidth="1dp"
+            app:paddingStart="@dimen/px_10"
+            app:gpvPasswordLength="4"
+            app:gpvPasswordType="numberPassword"
+            app:gpvTextSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/login_authcode_regiestxy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_82"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/login_authcode_agreexy"
+                android:layout_width="@dimen/px_120"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="同意"
+                android:textSize="@dimen/small_11_textsize"
+                android:textColor="#ffbe71"
+                />
+            <TextView
+                android:id="@+id/login_authcode_xybtn"
+                android:layout_width="@dimen/px_120"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="用户协议"
+                android:textSize="@dimen/small_11_textsize"
+                android:textColor="@color/color_cccccc"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>

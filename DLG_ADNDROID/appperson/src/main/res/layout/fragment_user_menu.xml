@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/left_draw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/slide_layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@mipmap/bg_findorder"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/map_rg"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_slid_rg"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <RadioButton
+                android:id="@+id/rb_01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_guyuan_button_style"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="雇员"
+                android:textColor="@drawable/checked_white_yellow"
+                android:textSize="14dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_guzhu_button_style"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="雇主"
+                android:textColor="@drawable/checked_white_gray"
+                android:textSize="14dp"/>
+
+        </RadioGroup>
+    </RelativeLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/slide_layout_head"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="-35dp"
+        android:background="@mipmap/mrtx"/>
+
+    <TextView
+        android:id="@+id/slid_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="登录"
+        android:layout_below="@+id/iv_head"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/slid_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slid_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:drawableLeft="@mipmap/icon_iscertification"
+        android:drawablePadding="2dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/gray_text"
+        android:textSize="11sp"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/layout_odd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/slide_layout_head">
+
+        <TextView
+            android:id="@+id/slide_linggong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pressed_layout"
+            android:drawableLeft="@mipmap/menu_linggong"
+            android:drawablePadding="10dp"
+            android:gravity="center|left"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:text="零工"
+            android:textColor="@color/gray_text"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/slide_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pressed_layout"
+        android:drawableLeft="@mipmap/menu_qianbao"
+        android:drawablePadding="10dp"
+        android:gravity="center|left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:text="钱包"
+        android:layout_below="@+id/layout_odd"
+        android:textColor="@color/gray_text"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:id="@+id/slide_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pressed_layout"
+        android:drawableLeft="@mipmap/menu_shezhi"
+        android:drawablePadding="10dp"
+        android:gravity="center|left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:text="设置"
+        android:layout_below="@+id/slide_money"
+        android:textColor="@color/gray_text"
+        android:textSize="18sp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_drawlay_bottom"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/icon_default_user"
+        android:layout_above="@+id/tv_drawlay_zhenwo"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_drawlay_zhenwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="真我"
+        android:textColor="@color/textColor_black_light01"
+        android:paddingBottom="30dp"
+        android:textSize="12sp"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

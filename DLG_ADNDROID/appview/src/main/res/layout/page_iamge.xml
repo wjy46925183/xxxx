@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor_overlay"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.common.view.iamge.TouchImageView
+        android:id="@+id/iamge_view"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher"
+        android:layout_height="match_parent" />
+</RelativeLayout>

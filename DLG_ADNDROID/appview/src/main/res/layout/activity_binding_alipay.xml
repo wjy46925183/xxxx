@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_line"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/alipay_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ttttt"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:text="陈传伟"
+            android:maxLength="10"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/black_textcolor"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_horizontal_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="支付宝账号"
+            android:textColor="@color/black_textcolor"
+            android:textColorHint="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/alipay_accout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ttttt"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:hint="请输入您的账号"
+            android:maxLength="30"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!--<include layout="@layout/line_horizontal_gray" />-->
+    <!--&lt;!&ndash; 注册号 &ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="15dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="预留手机号"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="16dp" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/bank_mobile"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="center|right"-->
+            <!--android:hint="请输入预留手机号"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="11"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="14sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<include layout="@layout/line_horizontal_gray" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="验证码"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="16dp" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/bank_qrcode"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="请输入验证码"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="6"-->
+            <!--android:paddingLeft="15dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="14sp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_getCode"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:background="@drawable/selector_button_blue"-->
+            <!--android:clickable="true"-->
+            <!--android:text="获取验证码"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="14sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<include layout="@layout/line_horizontal_gray" />-->
+
+    <Button
+        android:id="@+id/btn_Banding"
+        style="@style/Button_Blue"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:text="绑定账号" />
+
+</LinearLayout>

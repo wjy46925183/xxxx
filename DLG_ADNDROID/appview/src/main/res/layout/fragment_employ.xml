@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <TextView
+        android:id="@+id/workerorder_tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bar_order_yellow"
+        android:gravity="center_vertical"
+        android:paddingBottom="7dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="7dp"
+        android:visibility="gone"
+        android:text="8小时23分钟开工"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
+
+    <include layout="@layout/item_viewpager_map_order_list2"/>
+</LinearLayout>

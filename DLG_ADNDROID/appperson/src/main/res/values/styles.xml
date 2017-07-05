@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar.Start">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowBackground">@color/red</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowAnimationStyle">@style/fade</item>-->
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorPrimaryDark</item>-->
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+        <item name="android:actionBarSize">@dimen/height_6_80</item>
+        <item name="android:windowBackground">@color/app_bg_page</item>
+    </style>
+
+    <style name="ClubToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <!-- 设置该属性解决空白部分-->
+    </style>
+    <style name="TextAppearance.Design.Tab.Custom" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--沾满宽度的割线-->
+    <style name="line_thin_full" >
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/small_line_bg</item>
+    </style>
+
+    <!--细线不沾满-->
+    <style name="linethin_notfull" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.4dp</item>
+        <item name="android:background">@color/small_line_bg</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <!--粗线沾满-->
+    <style name="linefat_full" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/small_line_bg</item>
+    </style>
+
+    <!-- 蓝色的Button，点击变深蓝 -->
+    <style name="Button_Blue">
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/selector_button_blue</item>
+        <item name="android:textSize">@dimen/button_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+    <!--checkbox的样式-->
+    <style name="checkbox_style">
+        <item name="android:layout_width">@dimen/px_30</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/cmbkb_transparent</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:checked">false</item>
+    </style>
+    <!--左侧常用黑体-->
+    <style name="left_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/normal_textsize</item>
+        <item name="android:textColor">@color/cmbkb_lightblack</item>
+    </style>
+</resources>

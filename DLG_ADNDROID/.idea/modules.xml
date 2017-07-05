@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Canrefresh/Canrefresh.iml" filepath="$PROJECT_DIR$/Canrefresh/Canrefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DLG_ADNDROID.iml" filepath="$PROJECT_DIR$/DLG_ADNDROID.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InnerLib/InnerLib.iml" filepath="$PROJECT_DIR$/InnerLib/InnerLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appinc/appinc.iml" filepath="$PROJECT_DIR$/appinc/appinc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appperson/appperson.iml" filepath="$PROJECT_DIR$/appperson/appperson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appview/appview.iml" filepath="$PROJECT_DIR$/appview/appview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpush/jpush.iml" filepath="$PROJECT_DIR$/jpush/jpush.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okgohttp/okgohttp.iml" filepath="$PROJECT_DIR$/okgohttp/okgohttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/umengshare/umengshare.iml" filepath="$PROJECT_DIR$/umengshare/umengshare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/update/update.iml" filepath="$PROJECT_DIR$/update/update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewmodel/viewmodel.iml" filepath="$PROJECT_DIR$/viewmodel/viewmodel.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pressed_layout"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/MyProfile_Layout"
+        android:background="@color/transparent_color"
+        >
+
+        <TextView
+            android:id="@+id/name_text"
+            style="@style/left_text_style"
+            android:layout_alignParentLeft="true"
+            android:text="违约金" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            style="@style/checkbox_style"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View
+        style="@style/small_line_style"/>
+</LinearLayout>

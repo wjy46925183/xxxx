@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">打零工</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_employer_disagree_evaluate">EmployerDisagreeEvaluateAct</string>
+
+    <string name="toast_jijian_cancle">"功能维护中"</string>
+    <string name="no_dlg">附近没有找到零工</string>
+    <string name="guyuan">雇员</string>
+    <string name="guzhu">雇主</string>
+    <string name="has_yanzheng">已认证</string>
+    <string name="no_yanzheng">未认证</string>
+    <string name="aboat_our">关于我们</string>
+
+    <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"http://www.dalinggong.com\",\n  }\n}]</string>
+</resources>

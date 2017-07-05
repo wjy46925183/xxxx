@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/boss_layout_ordertitle"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/transparent"
+              xmlns:tools="http://schemas.android.com/tools"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:id="@+id/ll_toolbar"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/bossorder_mine"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/map_mine" />
+
+        <RelativeLayout
+            android:id="@+id/bossoder_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/bossoder_titie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/textColor_black_light03"
+                android:textSize="17dp"
+                tools:text="hahaha"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bossoder_titie"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2.5px"
+                android:textColor="#ffb552"
+                android:textSize="8sp"
+                tools:text="12元/天"/>
+
+            <ImageView
+                android:id="@+id/iv_down_up"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/bossoder_titie"
+                android:src="@mipmap/down" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_lots"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="批量"
+            android:textColor="@color/textColor_black_light03"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy_hire_desk"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/ll_toolbar"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_hire_desk_pager"
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

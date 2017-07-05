@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView android:id="@+id/alertButtonListView"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:cacheColorHint="@android:color/transparent"
+          android:divider="@null"
+          android:listSelector="@drawable/bg_alertbutton_none"
+          android:scrollbars="none"/>

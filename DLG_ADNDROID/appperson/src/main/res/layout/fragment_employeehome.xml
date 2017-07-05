@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_employee"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_4_5_80"
+        android:background="@color/white"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/app_color_yellow"
+        app:tabTextAppearance="@style/TextAppearance.Design.Tab.Custom"
+        app:tabTextColor="@color/textColor_black_light03" />
+
+    <ImageView
+        android:id="@+id/btn_list"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tablayout_employee"
+        android:layout_marginTop="@dimen/margin_20"
+        android:padding="@dimen/padding_10"
+        android:src="@mipmap/map_list" />
+
+    <LinearLayout
+        android:id="@+id/layout_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_list"
+        android:layout_marginTop="@dimen/margin_25"
+        android:background="@drawable/bg_roller"
+        android:clickable="true"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_task"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="false"
+            android:src="@mipmap/icon_default_user" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:clickable="false"
+            android:src="@mipmap/ic_task" />
+    </LinearLayout>
+
+
+    <com.dlg.personal.home.view.HomeTypeView
+        android:id="@+id/home_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_tv_card"
+        android:layout_alignParentLeft="true" />
+
+    <com.dlg.personal.home.view.HomePromptCardView
+        android:id="@+id/home_tv_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/bg_white_round"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_type"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_kefu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/margin_15"
+            android:src="@mipmap/map_sobot" />
+
+        <ImageView
+            android:id="@+id/iv_my_location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/margin_15"
+            android:src="@mipmap/map_reset" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_employee_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_alignParentBottom="true"/>
+    <!--列表-->
+    <FrameLayout
+        android:id="@+id/layout_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tablayout_employee" />
+</RelativeLayout>

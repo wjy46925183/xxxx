@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="#efefef">
+    <include layout="@layout/actionbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_date"
+        style="@style/MyProfile_Layout"
+        android:layout_marginTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="日期" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/right_release_style"
+            android:hint="请选择日期"
+            android:textColor="@color/textColor_black_light02"
+            android:textSize="@dimen/text_size_12"
+            android:textColorHint="@color/hint_textcolor" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <View style="@style/small_line_style" />
+    <LinearLayout
+        android:id="@+id/ll_time"
+        style="@style/MyProfile_Layout">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="时间" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/right_release_style"
+            android:hint="请选择时间"
+            android:textColor="@color/textColor_black_light02"
+            android:textSize="@dimen/text_size_12"
+            android:textColorHint="@color/hint_textcolor" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        style="@style/MyProfile_Layout"
+        android:layout_marginTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/left_text_style"
+            android:text="地址" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/right_release_style"
+            android:textColor="@color/textColor_black_light02"
+            android:hint="请选择地址"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:textSize="@dimen/text_size_12"
+            android:textColorHint="@color/hint_textcolor" />
+
+        <ImageView style="@style/right_img_style" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efefef"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_7_80"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/tv_commit_service"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_5_5_80"
+                android:textColor="@color/white"
+                android:background="@drawable/bottom_commit_button_bg"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="提交"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

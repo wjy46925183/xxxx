@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PasswordInputView">
+        <attr name="pivBorderColor" format="color"/>
+        <attr name="pivBorderWidth" format="dimension"/>
+        <attr name="pivBorderRadius" format="dimension"/>
+        <attr name="pivPasswordColor" format="color"/>
+        <attr name="pivPasswordWidth" format="dimension"/>
+        <attr name="pivPasswordRadius" format="dimension"/>
+        <attr name="pivPasswordLength" format="integer"/>
+    </declare-styleable>
+
+        <declare-styleable name="PreviewBorderView">
+            <attr name="tipText" format="string"/>
+            <attr name="tipTextColor" format="color|reference"/>
+            <attr name="tipTextSize" format="dimension"/>
+        </declare-styleable>
+
+    <!--自定义四个方向抽屉的属性-->
+    <declare-styleable name="MultiDirectionSlidingDrawer">
+        <attr name="handle" format="dimension"></attr>
+        <attr name="content" format="dimension"></attr>
+        <attr name="allowSingleTap" format="boolean"></attr>
+        <attr name="animateOnClick" format="boolean"></attr>
+        <attr name="bottomOffset" format="dimension"></attr>
+        <attr name="topOffset" format="dimension"></attr>
+        <attr name="direction" >
+            <enum name="rightToLeft" value="0" />
+            <enum name="bottomToTop" value="1" />
+            <enum name="leftToRight" value="2" />
+            <enum name="topToBottom" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>

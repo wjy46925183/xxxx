@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include android:id="@+id/title" layout="@layout/actionbar_text"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingBottom="60dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/receipt_txt2"
+                android:text="发票详情"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textSize="12dp"
+                android:background="@color/bg_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司抬头"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/et_company_rise"
+                    android:textCursorDrawable="@null"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:background="@null"
+                    android:hint="请输入公司抬头"
+                    />
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发票内容"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/tv_invoice_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="服务费"
+                    android:gravity="right"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发票金额"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/tv_invoice_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00元"
+                    android:gravity="right"
+                    android:textColor="@color/chenghong_textcolor"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_more_info"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多信息"
+                    android:textColor="@color/receipt_txt1"
+                    android:layout_centerVertical="true"
+                    android:textSize="15dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/next"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/receipt_txt2"
+                android:text="收件信息"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textSize="12dp"
+                android:background="@color/bg_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收件人"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/et_addressee"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:hint="请填写收件人"
+                    />
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/et_relation_telephone"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:hint="请填写联系电话"
+                    />
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在地区"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/et_location_area"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:hint="请填写所在地区"
+                    />
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="详细地址"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/et_bankaccount_address"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:hint="请填写开户行地址"
+                    />
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/receipt_txt2"
+                android:text="支付方式"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:background="@color/bg_color"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/zhifu_alipay"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="支付宝"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right">
+                    <CheckBox
+                        android:id="@+id/cb_alipay_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="6dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:button="@drawable/receipt_check_selector"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/zhifu_weixin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/receipt_txt1"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="微信"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right">
+                    <CheckBox
+                        android:id="@+id/cb_wechat_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:button="@drawable/receipt_check_selector"
+                        android:textColor="@color/receipt_txt1"
+                        android:layout_marginRight="6dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/zhifu_yiwangtong"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/receipt_txt1"
+                        android:textSize="15dp"
+                        android:text="银行卡"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/receipt_txt1"
+                        android:textSize="15dp"
+                        android:text="未绑定"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right">
+                    <CheckBox
+                        android:id="@+id/cb_bankcard_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:button="@drawable/receipt_check_selector"
+                        android:textColor="@color/receipt_txt1"
+                        android:layout_marginRight="6dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/line_horizontal_gray" />
+
+        </LinearLayout>
+    </ScrollView>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        >
+        <include layout="@layout/line_horizontal_gray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/receipt_txt1"
+                android:textSize="15dp"
+                android:text="代收税点6%"/>
+            <TextView
+                android:id="@+id/tv_select_receipt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/chenghong_textcolor"
+                android:textSize="15dp"
+                android:text="50元"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_btn_payment"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/orange_yellow"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:text="支付"/>
+    </RelativeLayout>
+    
+</RelativeLayout>

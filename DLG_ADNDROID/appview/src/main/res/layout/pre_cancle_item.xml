@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        style="@style/xq_linear_style"
+        android:background="@drawable/pressed_layout"
+        >
+        <include
+            layout="@layout/order_people_item"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:layout_marginRight="@dimen/left_right_jx"
+            android:layout_marginLeft="@dimen/left_right_jx"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="对方已取消"
+                android:textColor="@color/gray_textcolor"
+                android:textSize="@dimen/small_textsize"
+                />
+
+            <TextView
+                android:id="@+id/cancle_reseason_text"
+                android:layout_width="@dimen/px_260"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="取消原因：取消原因就是，我不想要了。"
+                android:textColor="@color/gray_textcolor"
+                android:textSize="@dimen/small_textsize"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

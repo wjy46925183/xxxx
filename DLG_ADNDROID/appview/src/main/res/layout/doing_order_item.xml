@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/xq_linear_style"
+        android:background="@drawable/pressed_layout">
+
+        <include layout="@layout/order_people_item" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:layout_marginLeft="@dimen/left_right_jx"
+            android:layout_marginRight="@dimen/left_right_jx">
+
+            <TextView
+                android:id="@+id/cancle_reseason_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="对方已取消"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/normal_textsize" />
+
+            <TextView
+                android:id="@+id/cancle_reseason_text"
+                android:layout_width="@dimen/px_260"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="取消原因：取消原因就是，我不想要了。"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/normal_textsize"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/action_re"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    android:id="@+id/cancle_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/px_30"
+                    android:layout_toLeftOf="@+id/agree_btn"
+                    android:background="@color/cmbkb_transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="不通过"
+                    android:textColor="@color/chenghong_textcolor"
+                    android:textSize="@dimen/normal_textsize" />
+
+                <Button
+                    android:id="@+id/agree_btn"
+                    android:layout_width="@dimen/px_150"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/cmbkb_transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="通过"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/normal_textsize" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line2"
+            style="@style/small_allline_style"
+            android:layout_marginLeft="@dimen/left_right_jx"
+            android:layout_marginRight="@dimen/left_right_jx" />
+
+        <RelativeLayout
+            android:id="@+id/pei_re"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:layout_marginLeft="@dimen/left_right_jx"
+            android:layout_marginRight="@dimen/left_right_jx">
+
+            <RelativeLayout
+                android:id="@+id/pei_re1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/pei_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/px_30"
+                    android:layout_toLeftOf="@+id/pei_text"
+                    android:background="@color/cmbkb_transparent"
+                    android:gravity="center"
+                    android:text="赔偿："
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/normal_textsize" />
+
+                <TextView
+                    android:id="@+id/pei_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/cmbkb_transparent"
+                    android:gravity="center"
+                    android:text="5元"
+                    android:textColor="@color/yellow_textcolor"
+                    android:textSize="@dimen/normal_textsize" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

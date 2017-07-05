@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <include
+        android:id="@+id/head_re"
+        layout="@layout/actionbar_order" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_re"
+        android:orientation="vertical">
+
+        <com.canyinghao.canrefresh.CanRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@id/can_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/cmbkb_transparent"
+                android:dividerHeight="0dp"
+                />
+
+            <com.canyinghao.canrefresh.classic.ClassicRefreshView
+                android:id="@id/can_refresh_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.canyinghao.canrefresh.classic.FooterRefreshView
+                android:id="@id/can_refresh_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.canyinghao.canrefresh.CanRefreshLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="30dp"
+        android:visibility="gone"
+        android:src="@mipmap/zanwudingdan" />
+
+</RelativeLayout>

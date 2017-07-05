@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <ImageView
+        android:id="@+id/tv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:paddingBottom="30dp"
+        android:src="@mipmap/zanwudingdan" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.canyinghao.canrefresh.CanRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.canyinghao.canrefresh.classic.ClassicRefreshView
+                android:id="@id/can_refresh_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.canyinghao.canrefresh.classic.FooterRefreshView
+                android:id="@id/can_refresh_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@id/can_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/bold_line_height"
+                android:paddingLeft="@dimen/bold_line_height"
+                android:paddingRight="@dimen/bold_line_height"
+                android:divider="@color/app_color_transparent"
+                android:dividerHeight="@dimen/bold_line_height"
+                />
+
+        </com.canyinghao.canrefresh.CanRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:drawableLeft="@drawable/checked_radiobutton"
+                android:drawablePadding="5dp"
+                android:text="全选"
+                android:textColor="@color/black_text"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/tv_delete"
+                style="@style/Button_Blue"
+                android:layout_width="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_toLeftOf="@+id/cb_all"
+                android:layout_weight="2"
+                android:text="删除选中"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/tv_cancle"
+                style="@style/Button_Blue"
+                android:layout_width="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_toLeftOf="@+id/tv_delete"
+                android:layout_weight="1"
+                android:text="完成"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/tv_piliang_delete"
+                style="@style/Button_Blue"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:text="批量删除" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

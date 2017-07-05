@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_item" />
+
+    <item name="request_image_view" type="id"/>
+
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+    <item name="tag_current_offset" type="id" />
+    <item name="tag_observable_view" type="id" />
+    <item name="tag_observable_view_last_scroll_x" type="id" />
+    <item name="tag_observable_view_last_scroll_y" type="id" />
+    <item name="tag_view_target" type="id" />
+    <item name="cb_item_tag" type="id"></item>
+
+    <item name="onclick_type" type="id" />
+    <item name="worker_order_card" type="id"></item>
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/bossmap_iv_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_default_user" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="36.0"
+                android:layout_marginTop="15dp"
+                android:textColor="#ff7a52"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="诚信档案"
+                android:layout_marginTop="7.5dp"
+                android:textColor="#c5c5c5"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/tv_employee_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="middle"
+                    android:maxLength="8"
+                    android:text="柳如逝"
+                    android:textColor="#202020"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_orders_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已接10单"
+                    android:paddingLeft="15dp"
+                    android:textColor="#ffb552"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="距离352m"
+                    android:textColor="#c5c5c5"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp">
+
+                <RatingBar
+                    android:id="@+id/rb_score_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:isIndicator="true"
+                    android:layout_gravity="center_vertical"
+                    android:numStars="5"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:progressDrawable="@drawable/star_yellow"
+                    android:rating="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_work_skill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:text="电工证、焊工证"
+                android:singleLine="true"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#7e7e7e"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_remarks_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.5dp"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:text="想从事电工或者焊工方面的工作"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_skill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="提供的服务:保洁 3元/小时...等等3项"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/app_color_yellow"
+                android:layout_marginRight="@dimen/margin_15"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_12"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

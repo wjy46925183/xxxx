@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="国有企业" />
+
+        <CheckBox
+            android:id="@+id/cb1"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="集体企业" />
+
+        <CheckBox
+            android:id="@+id/cb2"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="联营企业" />
+
+        <CheckBox
+            android:id="@+id/cb3"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="股份合作制企业" />
+
+        <CheckBox
+            android:id="@+id/cb4"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="私营企业" />
+
+        <CheckBox
+            android:id="@+id/cb5"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="个体户" />
+
+        <CheckBox
+            android:id="@+id/cb6"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="合伙企业" />
+
+        <CheckBox
+            android:id="@+id/cb7"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl8"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="有限责任公司" />
+
+        <CheckBox
+            android:id="@+id/cb8"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <View style="@style/small_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/rl9"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            style="@style/left_text_style"
+            android:layout_marginLeft="15dp"
+            android:text="股份有限公司" />
+
+        <CheckBox
+            android:id="@+id/cb9"
+            style="@style/checkbox_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+</LinearLayout>

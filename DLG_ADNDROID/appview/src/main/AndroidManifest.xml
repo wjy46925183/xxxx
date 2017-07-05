@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gongren.com.dlg">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.INTENT_FILTER_VERIFICATION_AGENT" />
+    <!--=========================================     友盟分享    ===================================================-->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!--=========================================     友盟分享    ===================================================-->
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".application.MyApplication"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:allowBackup="true"
+        android:exported="true"
+        tools:replace="android:icon"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="ongren.com.dlg.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+        <!-- 高德地图的API Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="70d1d576bbb204677adc9618ef71acfc" />
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5813115e7f2c744c54000640" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!--科大讯飞语音-->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="'59367c54'" />
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="打零工_android" />
+        <!-- 启动页 -->
+        <activity
+            android:name="com.dlg.personal.main.activity.StartPageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="dalinggong"/>
+            </intent-filter>
+            <!-- APP Links 方式，Android 23(6.0)版本及以后支持-->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.dalinggong.com"
+                    android:path="/eedetail"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.dalinggong.com"
+                    android:path="/eedetail"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="dalinggong.com"
+                    android:path="/eedetail"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="dalinggong.com"
+                    android:path="/eedetail"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- 雇员首页 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 设置 -->
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 个人信息 -->
+        <activity
+            android:name=".activity.UserInfoActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <!--用户头像裁剪页面-->
+        <activity
+            android:name=".activity.CropHeadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--企业用户信息-->
+        <activity
+            android:name=".activity.CompanyInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--选择企业所属行业-->
+        <activity
+            android:name=".activity.SelectNatureActivity"
+            android:screenOrientation="portrait" />
+        <!--企业信息的企业性质-->
+        <!-- 钱包 -->
+        <activity
+            android:name=".activity.MyWalletActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 收支明细 -->
+        <activity
+            android:name=".activity.BalanceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 收支明细详情 -->
+        <activity
+            android:name=".activity.BalanceInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 绑定阿里 -->
+        <activity
+            android:name=".activity.BindingAlipayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 编辑支付方式 -->
+        <activity
+            android:name=".activity.EditWalletCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 绑定银行卡 -->
+        <activity
+            android:name=".activity.BindingBankCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--识别银行卡号-->
+        <activity
+            android:name=".activity.BindingBankCardCameraActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 钱包充值 -->
+        <activity
+            android:name=".activity.RechargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.VIEW"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+                 <data android:scheme="wx68a8f66601847550"/>
+             </intent-filter>-->
+        </activity>
+        <!-- 钱包提现 -->
+        <activity
+            android:name=".activity.GetCashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 确认支付密码 -->
+        <activity
+            android:name=".activity.SetPayPasswordSecondActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|adjustResize" />
+        <!-- 绑定支付方式 -->
+        <activity
+            android:name=".activity.BundPaymentModeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--实名认证类型界面-->
+        <activity
+            android:name=".activity.RealNameAuthenticTypeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 代金券界面 -->
+        <activity
+            android:name=".activity.VoucherActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 钱包设置 -->
+        <activity
+            android:name=".activity.WalletSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 重新设置密码 -->
+        <activity
+            android:name=".activity.RestPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 设置密码 -->
+        <activity
+            android:name=".activity.SetPayPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 雇员详情 -->
+        <activity
+            android:name=".activity.EmployeeDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".activity.WebViewPageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 实名认证 -->
+        <activity
+            android:name=".activity.RealNameAuthenticationActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 取消订单 -->
+        <activity
+            android:name=".activity.CancleOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 支付订单 -->
+        <activity
+            android:name=".activity.PayordersActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 自定义拍照 -->
+        <activity
+            android:name=".activity.CustomCameraActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <!-- 雇主，我的需求列表 -->
+        <activity
+            android:name=".activity.OrderWorkerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 雇主，我的需求列表，待接单详情页 -->
+        <activity
+            android:name=".activity.PreOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 雇主，我的需求列表，正在进行详情页 -->
+        <activity
+            android:name=".activity.DoingOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 雇主，我的需求列表，待付款详情页 -->
+        <activity
+            android:name=".activity.PayOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 雇主，我的需求列表，已完成详情页 -->
+        <activity
+            android:name=".activity.FinishOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 雇主，我的需求列表，已完成->评价详情页 -->
+        <activity
+            android:name="gongren.com.dlg.activity.PingFenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 雇主，我的需求列表，发布零工页 -->
+        <activity
+            android:name=".activity.ReleaseXQActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <!-- 雇主，我的需求列表，发布零工页,选择零工类型页 -->
+        <activity
+            android:name=".activity.LGTypeActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 雇主，我的需求列表，发布零工页,选择零工类型页 -->
+        <activity
+            android:name=".activity.SelectAddressActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 招商银行支付界面 -->
+        <activity
+            android:name=".activity.CMBWebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 招商银行支付的安全键盘 -->
+        <activity
+            android:name="cmb.pb.ui.PBKeyboardActivity"
+            android:theme="@style/CmbDialogStyleBottom" />
+
+        <service
+            android:name="cmb.pb.cmbsafe.CmbService"
+            android:exported="false" />
+        <!-- 招商银行支付的安全键盘end -->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustUnspecified|stateHidden" />
+
+        <!-- 微信支付回调界面 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx68a8f66601847550" />
+            </intent-filter>
+        </activity>
+        <!-- 开启后台服务下载APK -->
+        <service android:name=".service.ApkService" />
+
+        <!-- 高德地图定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- wechat callback -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105693051" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- alipay sdk end -->
+
+        <activity
+            android:name=".activity.LoginDialogActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyles" />
+
+        <activity
+            android:name=".activity.ImageViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myTransparent" />
+
+        <!--消息详情-->
+        <activity
+            android:name=".activity.NewsInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 关于我们和用户协议 H5通用Activity -->
+        <activity
+            android:name=".activity.WebUtilsActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 发票管理 -->
+        <activity
+            android:name=".activity.ReceiptManagerActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 消息 -->
+        <activity
+            android:name=".activity.NewsActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity
+            android:name=".activity.SystemNewsActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity
+            android:name=".activity.JobRecomActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity
+            android:name=".activity.ActivityExtensionActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 开票历史 -->
+        <activity
+            android:name=".activity.ReceiptHistoryActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 发票详情 -->
+        <activity
+            android:name=".activity.ReceiptInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 修改密码 -->
+        <activity
+            android:name=".activity.RevisePassWordActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 订单开票 -->
+        <activity
+            android:name=".activity.OrderBillingActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <!-- 订单开票 更多信息 -->
+        <activity
+            android:name=".activity.OrderBillMoreInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+
+        <!-- 公共查询界面 刘奎 -->
+        <activity
+            android:name=".activity.SearchCommonActivity"
+            android:screenOrientation="portrait" />
+        <!-- 公共地址查询界面 刘奎 -->
+        <activity
+            android:name=".activity.AddressSearcherActivity"
+            android:screenOrientation="portrait" />
+        <!-- 零工搜索界面 刘奎 -->
+        <activity
+            android:name=".activity.WorkerSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 零工高级搜索（找什么样的零工） 刘奎 -->
+        <activity
+            android:name=".activity.FindWorkSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- boss雇他搜索结果列表 刘奎 -->
+        <activity
+            android:name=".activity.BossOrderActivity"
+            android:screenOrientation="portrait" />
+        <!--雇主的订单详情 包含地图位置 订单状态-->
+        <activity
+            android:name=".activity.MasterDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!--雇员的订单详情 包含地图位置 订单状态-->
+        <activity
+            android:name=".activity.EmployDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!--雇员的订单详情 包含地图位置 订单状态-->
+        <activity
+            android:name=".activity.WorkOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WorkerFindOrderActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--极光推送-->
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".pushmsg.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="gongren.com.dlg" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.AboatActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ReleaseServiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!--Image Selector Entry-->
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.MySericeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ServiceDetailActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

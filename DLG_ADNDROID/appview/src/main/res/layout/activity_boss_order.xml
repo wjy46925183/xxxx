@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+    >
+
+    <!--<include layout="@layout/actionbar_text" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        >
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10"/>
+        <RadioGroup
+            android:id="@+id/map_rg"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_xuqiu"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <RadioButton
+                android:id="@+id/rb_01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_xuqiu"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="需求"
+                android:textColor="@drawable/seletor_text_color"
+                android:textSize="14dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_xuqiu"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="服务"
+                android:textColor="@drawable/seletor_text_color"
+                android:textSize="14dp"/>
+
+        </RadioGroup>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/zanwu_data"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        layout="@layout/dlg_common_listview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_20"
+        android:background="@color/bg_color">
+
+        <Button
+            android:id="@+id/boss_order_checked"
+            style="@style/bottom_btn_style"
+            android:text="确定选择" />
+    </LinearLayout>
+</LinearLayout>

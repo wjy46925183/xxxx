@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+              android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="bottom"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/work_history_name"
+            android:text="服务员"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/work_history_type"
+            android:text="家政维修"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#a3a3a3"
+            android:textSize="13sp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/work_history_price"
+            android:text="100元/天"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#a3a3a3"
+            android:textSize="13sp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/work_history_time"
+            android:text="工作日"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#a3a3a3"
+            android:textSize="10sp"
+            android:background="@drawable/day_type_style"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

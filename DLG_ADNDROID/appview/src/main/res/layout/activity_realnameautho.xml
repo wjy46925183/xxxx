@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_text"></include>
+
+    <View style="@style/small_allline_style" />
+
+    <RelativeLayout
+        android:id="@+id/rel_img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_290"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="@dimen/px_408"
+            android:layout_height="@dimen/px_234"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <View style="@style/bold_line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/ll_name">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/left_right_jx"
+            android:text="姓名"
+            android:textColor="@color/black_textcolor"
+            android:textSize="@dimen/normal_textsize" />
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:textCursorDrawable="@null"
+            android:layout_marginRight="@dimen/left_right_jx"
+            android:background="@android:color/transparent"
+            android:gravity="right|center"
+            android:hint="请输入姓名"
+            android:inputType="textPersonName"
+            android:textColor="@color/right_change_textcolor"
+            android:textSize="@dimen/normal_textsize" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e5e5e5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/ll_card">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/left_right_jx"
+            android:text="证件号码"
+            android:textColor="@color/black_textcolor"
+            android:textSize="@dimen/normal_textsize" />
+
+        <EditText
+            android:id="@+id/ed_cardNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="@dimen/left_right_jx"
+            android:background="@android:color/transparent"
+            android:gravity="right|center"
+            android:textCursorDrawable="@null"
+            android:hint="请输入证件号码"
+            android:inputType="textPersonName"
+            android:textColor="@color/right_change_textcolor"
+            android:textSize="@dimen/normal_textsize" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/bottom_btn_style"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bottom_commit_button_bg"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_textsize" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

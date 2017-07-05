@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true"
+        android:drawable="@drawable/gw_items_bg" /><!--选中时效果-->
+    <item android:state_checked="false"
+        android:drawable="@drawable/gw_item_bg" /><!--未选中时效果-->
+</selector>

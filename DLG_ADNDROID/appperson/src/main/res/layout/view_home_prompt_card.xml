@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/map_point_green"
+        android:drawablePadding="@dimen/padding_10"
+        android:drawableRight="@mipmap/enter"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_15"
+        android:singleLine="true"
+        android:text="正在获取我的位置..."
+        android:textColor="@color/textColor_black_light01"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        style="@style/line_thin_full"
+        android:layout_marginLeft="34dp" />
+
+    <TextView
+        android:id="@+id/btn_release_jobs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/map_point_green"
+        android:drawablePadding="@dimen/padding_10"
+        android:drawableRight="@mipmap/enter"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_15"
+        android:singleLine="true"
+        android:text="你想找什么样的零工"
+        android:textColor="@color/textColor_black_light01"
+        android:textSize="@dimen/text_size_14" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile project(':common')
+    compile project(':Canrefresh')
+    compile project(':InnerLib')
+    compile project(':jpush')
+    compile project(':umengshare')
+    compile project(':update')
+    compile project(':viewmodel')
+//    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.1@aar'
+}

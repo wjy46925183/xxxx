@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62.4dp"
+    android:layout_margin="@dimen/left_right_jx"
+    android:background="@color/white_color"
+                android:addStatesFromChildren="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:addStatesFromChildren="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true">
+
+            <TextView
+                android:id="@+id/ordername_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="150dp"
+                android:layout_centerVertical="true"
+                android:text="服务员"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black_textcolor"
+                android:textSize="@dimen/normal_textsize" />
+
+            <TextView
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_30"
+                android:layout_toRightOf="@id/ordername_text"
+                android:background="@drawable/day_type_style"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:text="双休日"
+                android:textColor="@color/right_nochange_textcolor"
+                android:textSize="@dimen/small_11_textsize" />
+            <TextView
+                android:id="@+id/baoxian"
+                android:layout_marginLeft="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@mipmap/baox"
+                android:visibility="invisible"
+                android:layout_toRightOf="@id/type_text"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/time_text"
+            style="@style/xq_graytext_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_15"
+            android:text="03-27至30     9:00-18:00" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/income_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/chenghong_textcolor"
+        android:textSize="@dimen/normal_textsize" />
+</RelativeLayout>
+

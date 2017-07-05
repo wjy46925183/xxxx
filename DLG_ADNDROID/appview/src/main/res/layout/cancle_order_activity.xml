@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <include
+        android:id="@+id/userinfo_head"
+        layout="@layout/actionbar_text" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/userinfo_head"
+        android:background="@color/bg_color" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_linear"
+        android:layout_below="@id/line1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_320">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="@dimen/px_70"
+                        android:layout_height="@dimen/px_70"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@mipmap/morentouxiang" />
+
+                    <TextView
+                        android:id="@+id/fen_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/px_30"
+                        android:text="扣除诚信值1分"
+                        android:textColor="@color/black_textcolor"
+                        android:textSize="@dimen/normal_textsize" />
+
+                    <TextView
+                        android:id="@+id/guize_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/px_20"
+                        android:text="诚信值规则"
+                        android:textColor="@color/gray_textcolor"
+                        android:textSize="@dimen/small_textsize" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/income_line"
+                style="@style/bold_line_style" />
+
+            <LinearLayout
+                android:id="@+id/income_linear"
+                style="@style/MyProfile_Layout"
+                >
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="报酬" />
+
+                <TextView
+                    android:id="@+id/income_text"
+                    style="@style/right_changetext_style"
+                    android:text="50元" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/weiyue_line"
+                style="@style/small_line_style" />
+
+            <LinearLayout
+                android:id="@+id/weiyue_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="违约金" />
+
+                <TextView
+                    android:id="@+id/xm_text"
+                    style="@style/right_changetext_style"
+                    android:text="50元" />
+            </LinearLayout>
+
+            <View style="@style/bold_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="取消原因"
+                    android:textColor="@color/gray_textcolor"
+                    android:textSize="@dimen/small_textsize" />
+
+                <TextView
+                    style="@style/right_changetext_style"
+                    android:text="" />
+            </LinearLayout>
+
+            <View style="@style/small_line_style" />
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/transparent_color"
+                android:dividerHeight="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_120"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_90"
+            android:layout_marginBottom="@dimen/px_15"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_marginRight="@dimen/px_30"
+            android:layout_marginTop="@dimen/px_15"
+            android:background="@drawable/bottom_commit_button_bg"
+            android:gravity="center"
+            android:text="确定取消"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/normal_textsize" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="actionbar">44dp</dimen>
+    <dimen name="button_size">18sp</dimen>
+    <dimen name="button_height">44dp</dimen>
+
+    <!--AlertView尺寸值-->
+    <!--标题文字大小-->
+    <dimen name="textSize_alert_title">22sp</dimen>
+    <dimen name="textSize_actionsheet_title">14sp</dimen>
+    <!--标题文字高度-->
+    <dimen name="height_alert_title">60dp</dimen>
+    <dimen name="height_actionsheet_title">40dp</dimen>
+    <!--消息文字大小-->
+    <dimen name="textSize_alert_msg">15sp</dimen>
+    <dimen name="textSize_actionsheet_msg">14sp</dimen>
+    <!--消息距离底部间距-->
+    <dimen name="marginBottom_alert_msg">25dp</dimen>
+    <dimen name="marginBottom_actionsheet_msg">14dp</dimen>
+    <!--窗口模式左右两边到屏幕的间距-->
+    <dimen name="margin_alert_left_right">40dp</dimen>
+    <dimen name="margin_actionsheet_left_right">10dp</dimen>
+    <!--线条粗细-->
+    <dimen name="size_divier">1dp</dimen>
+    <!--按钮的高度-->
+    <dimen name="height_alert_button">48dp</dimen>
+    <!--按钮文字大小-->
+    <dimen name="textSize_alert_button">18sp</dimen>
+    <!--圆角-->
+    <dimen name="radius_alertview">15px</dimen>
+    <dimen name="user_icon_size">35dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="slidingmenu_offset">100dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+
+    <!--常规字体大小-->
+    <dimen name="big_textsize">18sp</dimen>
+    <dimen name="normal_textsize">15sp</dimen>
+    <dimen name="small_textsize">12sp</dimen>
+    <dimen name="small_11_textsize">11sp</dimen>
+    <dimen name="small_10_textsize">10sp</dimen>
+
+    <!--一般距离左右两边边界的距离-->
+    <dimen name="left_right_jx">@dimen/px_30</dimen>
+    <dimen name="small_line_height">0.5dp</dimen>
+    <dimen name="bold_line_height">10dp</dimen>
+    <dimen name="line_height">@dimen/px_88</dimen>
+
+    <dimen name="camera_height">220dp</dimen>
+    <!--雇主，我的需求，列表删除区域的宽度-->
+    <dimen name="delete_width">50dp</dimen>
+
+    <dimen name="px_f154">-74.04dp</dimen>
+
+    <dimen name="px_8">3.92dp</dimen>
+    <dimen name="px_10">4.81dp</dimen>
+    <dimen name="px_15">7.21dp</dimen>
+    <dimen name="px_20">9.62dp</dimen>
+    <dimen name="px_25">12.02dp</dimen>
+    <dimen name="px_30">14.42dp</dimen>
+    <dimen name="px_40">19.23dp</dimen>
+    <dimen name="px_50">24.04dp</dimen>
+    <dimen name="px_59">28.37dp</dimen>
+    <dimen name="px_60">28.85dp</dimen>
+    <dimen name="px_68">32.69dp</dimen>
+    <dimen name="px_70">33.65dp</dimen>
+    <dimen name="px_72">34.62dp</dimen>
+    <dimen name="px_78">37.5dp</dimen>
+    <dimen name="px_80">38.46dp</dimen>
+    <dimen name="px_82">39.42dp</dimen>
+    <dimen name="px_86">41.35dp</dimen>
+    <dimen name="px_88">42.31dp</dimen>
+    <dimen name="px_90">43.27dp</dimen>
+    <dimen name="px_100">48.08dp</dimen>
+    <dimen name="px_120">57.69dp</dimen>
+    <dimen name="px_130">62.5dp</dimen>
+    <dimen name="px_136">65.38dp</dimen>
+    <dimen name="px_140">67.31dp</dimen>
+    <dimen name="px_150">72.12dp</dimen>
+    <dimen name="px_160">76.92dp</dimen>
+    <dimen name="px_176">84.62dp</dimen>
+    <dimen name="px_200">96.15dp</dimen>
+    <dimen name="px_212">101.92dp</dimen>
+    <dimen name="px_234">112.5dp</dimen>
+    <dimen name="px_240">115.38dp</dimen>
+    <dimen name="px_245">117.79dp</dimen>
+    <dimen name="px_246">118.27dp</dimen>
+    <dimen name="px_247">118.75dp</dimen>
+    <dimen name="px_250">125dp</dimen>
+    <dimen name="px_260">120.19dp</dimen>
+    <dimen name="px_272">130.77dp</dimen>
+    <dimen name="px_290">139.42dp</dimen>
+    <dimen name="px_300">144.23dp</dimen>
+    <dimen name="px_305">146.63dp</dimen>
+    <dimen name="px_310">149.04dp</dimen>
+    <dimen name="px_320">153.85dp</dimen>
+    <dimen name="px_332">159.62dp</dimen>
+    <dimen name="px_340">163.46dp</dimen>
+    <dimen name="px_375">180.29dp</dimen>
+    <dimen name="px_408">196.15dp</dimen>
+    <dimen name="px_450">216.35dp</dimen>
+    <dimen name="px_500">240.38dp</dimen>
+    <dimen name="px_530">254.81dp</dimen>
+    <dimen name="px_535">257.21dp</dimen>
+    <dimen name="px_560">269.23dp</dimen>
+    <dimen name="px_600">288.46dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+</resources>

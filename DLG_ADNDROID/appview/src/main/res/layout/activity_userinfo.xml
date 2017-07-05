@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+             android:id="@+id/ft"
+    android:background="@color/white">
+
+    <gongren.com.dlg.view.ObservableScrollView
+        android:id="@+id/m_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/userinfo_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/head_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ditu"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="70dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/iv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/px_25"
+                    android:maxLength="11"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MyProfile_Layout"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="昵称" />
+
+                <EditText
+                    android:id="@+id/xm_text"
+                    style="@style/right_changetext_style"
+                    android:maxLength="11"
+                    android:text="" />
+
+
+            </LinearLayout>
+
+            <View style="@style/small_line_style" />
+
+            <LinearLayout
+                android:id="@+id/idCard"
+                style="@style/MyProfile_Layout"
+                android:onClick="go2ShiMing">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="真实姓名" />
+
+                <TextView
+                    android:id="@+id/name_text"
+                    style="@style/right_no_changetext_style"
+                    android:text="实名认证"
+                    android:textColor="@color/yellow_textcolor" />
+
+                <ImageView
+                    android:id="@+id/name_right_img"
+                    style="@style/right_img_style"
+                    android:src="@mipmap/enter_yellow" />
+            </LinearLayout>
+
+            <View style="@style/bold_line_style" />
+
+            <LinearLayout
+                style="@style/MyProfile_Layout"
+                android:onClick="selectSF">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="身份" />
+
+                <TextView
+                    android:id="@+id/sf_text"
+                    style="@style/right_no_changetext_style"
+                    android:text="自由工作者" />
+
+                <ImageView style="@style/right_img_style" />
+            </LinearLayout>
+
+            <View style="@style/bold_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="身高  cm" />
+
+                <EditText
+                    android:id="@+id/height_text"
+                    style="@style/right_changetext_style"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View style="@style/small_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="体重  kg" />
+
+                <EditText
+                    android:id="@+id/weight_text"
+                    style="@style/right_changetext_style"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View style="@style/bold_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="所在地" />
+
+                <TextView
+                    android:id="@+id/liveaddress_text"
+                    style="@style/right_changetext_style"
+                    android:text="" />
+
+                <ImageView style="@style/right_img_style" />
+            </LinearLayout>
+
+            <View style="@style/bold_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="邮箱" />
+
+                <EditText
+                    android:id="@+id/email_text"
+                    style="@style/right_changetext_style"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View style="@style/small_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="QQ" />
+
+                <EditText
+                    android:id="@+id/qq_text"
+                    style="@style/right_changetext_style"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View style="@style/bold_line_style" />
+
+            <LinearLayout style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="个人签名" />
+
+                <EditText
+                    android:id="@+id/desc_text"
+                    style="@style/right_changetext_style"
+                    android:ellipsize="end"
+                    android:paddingLeft="@dimen/px_10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View style="@style/bottom_jx_style" />
+        </LinearLayout>
+    </gongren.com.dlg.view.ObservableScrollView>
+    <include
+        android:id="@+id/userinfo_head"
+        layout="@layout/actionbar_text" />
+</FrameLayout>

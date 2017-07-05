@@ -1,0 +1,1 @@
+include ':appview', ':InnerLib', ':jpush', ':update', ':Canrefresh', ':common', ':umengshare', ':okgohttp', ':data', ':viewmodel', ':appinc', ':appperson'

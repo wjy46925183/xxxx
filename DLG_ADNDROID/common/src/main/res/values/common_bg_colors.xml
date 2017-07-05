@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_white">#ffffff</color>
+
+    <color name="bg_colors_dialog_title">#F1F1F1</color>
+    <color name="bg_colors_dialog_context">#FFFFFF</color>
+    <color name="bg_colors_dialog_search">#334050</color>
+    <color name="bg_colors_dialog_green">#00be88</color>
+    <color name="bg_colors_dialog_green_hint">#8800be88</color>
+
+</resources>

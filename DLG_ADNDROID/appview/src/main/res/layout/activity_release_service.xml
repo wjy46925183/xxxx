@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+    android:background="#efefef">
+    <include layout="@layout/actionbar"
+        />
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:tabTextAppearance="@style/CustomTabLayoutTextAppearance"
+        app:tabSelectedTextColor="@color/app_color_yellow"
+        app:tabTextColor="@color/textColor_black_light01"
+        app:tabIndicatorColor="@color/app_color_yellow"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout"
+        android:layout_above="@+id/ll_relese"
+        android:clickable="true"
+        android:background="#efefef">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <View style="@style/small_line_style" />
+            <LinearLayout style="@style/MyProfile_Layout">
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="零工" />
+
+                <EditText
+                    android:id="@+id/tv_odd_serice"
+                    style="@style/right_release_style"
+                    android:hint="请输入零工名称"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textCursorDrawable="@null">
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+            <View style="@style/small_line_style" />
+
+            <LinearLayout
+                android:id="@+id/type_select_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="类型" />
+
+                <TextView
+                    android:id="@+id/type_text"
+                    style="@style/right_release_style"
+                    android:text=""
+                    android:textColorHint="@color/hint_textcolor" />
+
+                <ImageView style="@style/right_img_style" />
+            </LinearLayout>
+
+            <View style="@style/small_line_style" />
+
+            <LinearLayout
+                android:id="@+id/jine_linear"
+                style="@style/MyProfile_Layout">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="报酬(元)" />
+
+                <EditText
+                    android:id="@+id/pay_text"
+                    style="@style/right_release_style"
+                    android:digits="0123456789"
+                    android:hint="我希望得到多少报酬"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+            <View style="@style/small_line_style" />
+            <RelativeLayout
+                android:id="@+id/unit_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx">
+
+                <TextView
+                    style="@style/left_text_style"
+                    android:text="单位"/>
+
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/day_rbtn"
+                        android:layout_width="@dimen/px_120"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/time_btn_bg_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="天"
+                        android:tag="1"
+                        android:textColor="@drawable/gridview_textcolor_selector"
+                        android:textSize="@dimen/normal_textsize"/>
+
+                    <View
+                        android:layout_width="@dimen/px_30"
+                        android:layout_height="match_parent"/>
+
+                    <RadioButton
+                        android:id="@+id/hour_rbtn"
+                        android:layout_width="@dimen/px_120"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/time_btn_bg_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="小时"
+                        android:tag="2"
+                        android:textColor="@drawable/gridview_textcolor_selector"
+                        android:textSize="@dimen/normal_textsize"/>
+                    <View
+                        android:layout_width="@dimen/px_30"
+                        android:layout_height="match_parent"/>
+
+                    <RadioButton
+                        android:id="@+id/hour_dan"
+                        android:layout_width="@dimen/px_120"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/time_btn_bg_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="单"
+                        android:tag="3"
+                        android:visibility="gone"
+                        android:textColor="@drawable/gridview_textcolor_selector"
+                        android:textSize="@dimen/normal_textsize"/>
+                </RadioGroup>
+            </RelativeLayout>
+            <View style="@style/small_line_style"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_right_jx"
+                android:layout_marginRight="@dimen/left_right_jx">
+
+                <TextView
+                    android:id="@+id/desc_tab"
+                    android:layout_width="@dimen/px_120"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:gravity="center_vertical"
+                    android:text="描述"
+                    android:textColor="@color/black_textcolor"
+                    android:textSize="@dimen/normal_textsize"/>
+
+                <EditText
+                    android:id="@+id/desc_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/desc_tab"
+                    android:background="@color/transparent_color"
+                    android:gravity="top"
+                    android:hint="说一说具体的零工技能，清楚明确的描述更容易吸引雇主(5-200字)"
+                    android:maxLength="200"
+                    android:minHeight="@dimen/px_120"
+                    android:paddingBottom="@dimen/px_20"
+                    android:paddingLeft="@dimen/px_20"
+                    android:paddingTop="@dimen/px_20"
+                    android:text=""
+                    android:textColor="@color/cmbkb_lightblack"
+                    android:textColorHint="@color/hint_textcolor"
+                    android:textSize="@dimen/normal_textsize"/>
+            </RelativeLayout>
+            <View style="@style/small_line_style"/>
+            <aym.view.gridview.GridViewNoScroll
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_15"
+                android:numColumns="3"
+                android:horizontalSpacing="4dp"
+                android:verticalSpacing="4dp"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_relese"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_7_80"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_relese"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_5_5_80"
+            android:textColor="@color/white"
+            android:background="@drawable/bottom_commit_button_bg"
+            android:textSize="@dimen/text_size_15"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_10"
+            android:text="确认发布"/>
+    </LinearLayout>
+</RelativeLayout>

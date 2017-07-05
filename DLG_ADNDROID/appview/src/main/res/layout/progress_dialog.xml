@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_dialog">
+
+    <gongren.com.dlg.view.GifView
+        android:id="@+id/gifview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white_dialog"/>
+
+    <TextView
+        android:id="@+id/tv_waitcomfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
+        android:text="等待确认"
+        android:visibility="visible"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

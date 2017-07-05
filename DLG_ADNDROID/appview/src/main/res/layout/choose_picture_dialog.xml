@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/dialoglist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/cmbkb_transparent"
+        android:dividerHeight="0dp"
+        android:minHeight="85dp" />
+
+    <Button
+        android:id="@+id/cancle_btn"
+        style="@style/dialog_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="取消" />
+</LinearLayout>

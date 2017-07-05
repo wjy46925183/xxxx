@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:text="设置登录密码"
+            android:textColor="@color/black_text"
+            android:textSize="18sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/login_setpassword_pwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+
+            <gongren.com.dlg.view.VisibleEditText
+                android:id="@+id/login_setpassword_password"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:maxLength="14"
+                android:padding="5dp"
+                android:textColor="@color/black_textcolor"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/login_setpassword_showpsd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/password_selector"
+                android:checked="true"></CheckBox>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#a3a3a3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:textSize="@dimen/small_10_textsize"
+            android:text="为了保障您的账号安全，请设置登录密码" />
+
+        <TextView
+            android:id="@+id/login_setpassword_sure"
+            android:layout_width="@dimen/px_535"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_login_bottombtn_"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
